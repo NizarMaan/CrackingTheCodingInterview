@@ -1,0 +1,11 @@
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.deps.json
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.runtimeconfig.json
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.runtimeconfig.dev.json
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.dll
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.pdb
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.csproj.CoreCompileInputs.cache
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.AssemblyInfoInputs.cache
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.AssemblyInfo.cs
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.dll
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.pdb
+c:\users\nizar\documents\visual studio 2017\Projects\CommonInterviewQuestionsPractice\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.csprojResolveAssemblyReference.cache
