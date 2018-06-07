@@ -16,6 +16,11 @@ namespace CommonInterviewQuestionsPractice
             Console.WriteLine(a + " " + b);
             Swap(a, b);
             Console.WriteLine(a + " " + b);
+
+            int[] testList = new int[] {2, 7, -2, 0, 2, 1, 3, 11, 5, 4, 6, 12, 10};
+            Console.WriteLine(HasPair(testList, 8));
+            Console.WriteLine(HasPair(testList, -2));
+            Console.WriteLine(HasPair(testList, 24));
         }
 
         /*----------------------pg. 90 Question 1.1-------------------------------------------*/
@@ -89,5 +94,67 @@ namespace CommonInterviewQuestionsPractice
             return str;
         }
         /*------------------------------------------------------------------------------------*/
+
+        //Google "finding pairs in a list that add up to a sum"
+        public static string HasPair(int[] list, int desiredSum)
+        {
+            Hashtable numTracker = new Hashtable();
+            for(int i = 0; i < list.Length; i++)
+            {
+                if(numTracker[desiredSum - list[i]] != null)
+                {
+                    return new Pair<int, int>(desiredSum - list[i], list[i]).ToString();
+                }
+                //if number not already in our hashtable
+                if (numTracker[list[i]] == null)
+                {
+                    numTracker.Add(list[i], list[i]);
+                }
+            }
+
+            return "no pair";
+        }
+
+        class Pair<T, Y>
+        {
+            private T item1;
+            private Y item2;
+
+            public T Item1
+            {
+                get{
+                    return item1;
+                }
+
+                set{
+                    item1 = value;
+                }
+            }
+
+            public Y Item2
+            {
+                get
+                {
+                    return item2;
+                }
+
+                set
+                {
+                    item2 = value;
+                }
+            }
+
+            public Pair(T item1, Y item2)
+            {
+                this.item1 = item1;
+                this.item2 = item2;
+            }
+
+            override
+            public string ToString()
+            {
+                return "Pair: {" + item1 + ", " + item2 + "}";
+            }
+        }
     }
 }
