@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Text;
 
 namespace CommonInterviewQuestionsPractice
 {
@@ -16,6 +17,8 @@ namespace CommonInterviewQuestionsPractice
             Console.WriteLine(a + " " + b);
             Swap(a, b);
             Console.WriteLine(a + " " + b);
+
+            Console.WriteLine(URLify("I like to program things                                                             ", 24));
 
             int[] testList = new int[] {2, 7, -2, 0, 2, 1, 3, 11, 5, 4, 6, 12, 10};
             Console.WriteLine(HasPair(testList, 8));
@@ -90,8 +93,62 @@ namespace CommonInterviewQuestionsPractice
 
         /*----------------------pg. 90 Question 1.2-------------------------------------------*/
         public static string URLify(string str, int trueLength) //param: trueLength is the length of the string ignoring empty space after the last non-empty char
-        {
-            return str;
+        {           
+            int spacesCount = 0;
+            char[] specialChar = new char[] { '%', '2', '0' };
+            StringBuilder newString = new StringBuilder();
+            newString.Length = str.Length;
+
+            //count spaces
+            for (int i = 0; i < trueLength; i++)
+            {
+                if(Char.IsWhiteSpace(str[i]))
+                {
+                    spacesCount++;
+                }
+            }
+
+            int newTrueLength = trueLength + (2 * spacesCount);
+
+            //shift characters down
+            for (int i = trueLength - 1; i >= 0; i--)
+            {
+                if(spacesCount > 0)
+                {
+                    if (Char.IsWhiteSpace(str[i]))
+                    {
+                        spacesCount--;
+                    }
+                    else
+                    {
+                        newString[i + (2 * spacesCount)] = str[i];
+                    }
+                }
+                else
+                {
+                    newString[i] = str[i];
+                }
+            }
+
+            //replace spaces with %20 characters
+            int counter = 0;
+            for (int i = 0; i < newTrueLength; i++)
+            {
+                if(counter == specialChar.Length)
+                {
+                    counter = 0;
+                }
+                else
+                {
+                    if (newString[i] == 0)
+                    {
+                        newString[i] = specialChar[counter];
+                        counter++;
+                    }
+                }
+            }
+
+            return newString.ToString();
         }
         /*------------------------------------------------------------------------------------*/
 
@@ -117,43 +174,21 @@ namespace CommonInterviewQuestionsPractice
 
         class Pair<T, Y>
         {
-            private T item1;
-            private Y item2;
 
-            public T Item1
-            {
-                get{
-                    return item1;
-                }
+            public T Item1 { get; set; }
 
-                set{
-                    item1 = value;
-                }
-            }
-
-            public Y Item2
-            {
-                get
-                {
-                    return item2;
-                }
-
-                set
-                {
-                    item2 = value;
-                }
-            }
+            public Y Item2 { get; set; }
 
             public Pair(T item1, Y item2)
             {
-                this.item1 = item1;
-                this.item2 = item2;
+                Item1 = item1;
+                Item2 = item2;
             }
 
             override
             public string ToString()
             {
-                return "Pair: {" + item1 + ", " + item2 + "}";
+                return "Pair: {" + Item1 + ", " + Item2 + "}";
             }
         }
     }

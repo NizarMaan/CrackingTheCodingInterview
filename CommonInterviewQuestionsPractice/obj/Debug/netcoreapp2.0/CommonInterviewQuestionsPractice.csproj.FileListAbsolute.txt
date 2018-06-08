@@ -20,3 +20,14 @@ C:\Users\Nizar Maan\Desktop\Nizar\visual-studio-projects\Applications\CrackingTh
 C:\Users\Nizar Maan\Desktop\Nizar\visual-studio-projects\Applications\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.AssemblyInfo.cs
 C:\Users\Nizar Maan\Desktop\Nizar\visual-studio-projects\Applications\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.dll
 C:\Users\Nizar Maan\Desktop\Nizar\visual-studio-projects\Applications\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.pdb
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.deps.json
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.runtimeconfig.json
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.runtimeconfig.dev.json
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.dll
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\bin\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.pdb
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.csprojResolveAssemblyReference.cache
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.csproj.CoreCompileInputs.cache
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.AssemblyInfoInputs.cache
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.AssemblyInfo.cs
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.dll
+C:\Users\Nizar\Documents\Visual Studio 2017\Projects\CrackingTheCodingInterview\CommonInterviewQuestionsPractice\obj\Debug\netcoreapp2.0\CommonInterviewQuestionsPractice.pdb
