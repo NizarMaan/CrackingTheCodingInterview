@@ -34,6 +34,14 @@ namespace CommonInterviewQuestionsPractice
             PrintLinkedListValues(head);
             head = Partition(head, 6);
             PrintLinkedListValues(head);
+
+            int[] num1 = new int[] { 5, 0 };
+            Node head2 = new Node(6);
+            PopulateLinkedList(head2, num1);
+            Node head3 = new Node(3);
+            PopulateLinkedList(head3, num1);
+            Node sum = SumOfLinkedLists(head2, head3);
+            PrintLinkedListValues(sum);
         }
 
         /*----------------------pg. 94 Question 2.1-------------------------------------------*/
@@ -184,12 +192,121 @@ namespace CommonInterviewQuestionsPractice
         /*------------------------------------------------------------------------------------*/
 
         /*----------------------pg. 94 Question 2.4-------------------------------------------*/
+        //changing one of the objects within the linked list changes its value across newHead, tail, and head
         private Node Partition(Node head, int partition)
         {
-            return head;
+            Node newHead = head;
+            Node tail = head;
+
+            while(head != null)
+            {
+                Node next = head.Next;
+                if(head.Value < partition)
+                {
+                    head.Next = newHead;
+                    newHead = head;
+                }
+                else
+                {
+                    tail.Next = head;
+                    tail = head;
+                }
+
+                head = next;
+            }
+
+            return newHead;
         }
- 
-        
+
+        /*------------------------------------------------------------------------------------*/
+
+        /*----------------------pg. 95 Question 2.5-------------------------------------------*/
+        /// <summary>
+        /// Returns sum of the numbers represented by two linked lists in forward order. 
+        /// Each node contains a 1 digit integer
+        /// </summary>
+        /// <param name="head1">representing a number in forward order e.g. 1 -> 6 -> 7 represents the number 167</param>
+        /// <param name="head2">representing a number in forward order e.g. 1 -> 6 -> 7 represents the number 167</param>
+        /// <returns>Linked list representing the sum of the numbers represented by the two arguments in forward order</returns>
+        private Node SumOfLinkedLists(Node head1, Node head2)
+        {
+            int sum;
+            int length1 = 0;
+            int length2 = 0;
+            int value1 = 0;
+            int value2 = 0;
+            Node sumAsLinkedList = new Node(-1);
+            Node pointer1 = head1;
+            Node pointer2 = head2;
+
+            while (true)
+            {
+                if(pointer1 != null)
+                {
+                    length1++;
+                    pointer1 = pointer1.Next;
+                }
+                else if(pointer2 != null)
+                {
+                    length2++;
+                    pointer2 = pointer2.Next;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            pointer1 = head1;
+            while(pointer1 != null)
+            {
+                value1 += (int)(pointer1.Value * Math.Pow(10, length1 - 1));
+                length1--;
+                pointer1 = pointer1.Next;
+            }
+
+            pointer2 = head2;
+            while (pointer2 != null)
+            {
+                value2 += (int)(pointer2.Value * Math.Pow(10, length2 - 1));
+                length2--;
+                pointer2 = pointer2.Next;
+            }
+
+            sum = value1 + value2;
+            string sumStr = sum.ToString();
+            Node pointer = new Node(-1);
+
+            for(int i = 0; i < sumStr.Length; i++)
+            {
+                if (i == 0)
+                {
+                    sumAsLinkedList = new Node((int)Char.GetNumericValue(sumStr[i]));
+                    pointer = sumAsLinkedList;
+                }
+                else
+                {
+                    pointer.Next = new Node((int)Char.GetNumericValue(sumStr[i]));
+                    pointer = pointer.Next;
+                }
+            }
+
+            return sumAsLinkedList;
+        }
+        /*------------------------------------------------------------------------------------*/
+        /*----------------------pg. 95 Question 2.6-------------------------------------------*/
+        /// <summary>
+        /// Returns true or false if the Linked list of integers is a palindrome e.g. 1 -> 1 -> 1 is a palindrome
+        /// </summary>
+        /// <param name="head">head of linked list to check</param>
+        /// <returns>
+        /// true - if is palindrome
+        /// false - if not palindrome
+        /// </returns>
+        private bool IsPalindrome(Node head)
+        {
+            return false;
+        }
         /*------------------------------------------------------------------------------------*/
     }
 }
