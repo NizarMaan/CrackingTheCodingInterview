@@ -11,6 +11,8 @@ namespace CommonInterviewQuestionsPractice
         {
             Chapter1Problems.GetInstance().RunProblems();
             Chapter2Problems.GetInstance().RunProblems();
+            Chapter3Problems.GetInstance().RunProblems();
+            OtherProblems.GetInstance().RunProblems();
         }
     }
 }

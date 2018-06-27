@@ -42,6 +42,27 @@ namespace CommonInterviewQuestionsPractice
             PopulateLinkedList(head3, num1);
             Node sum = SumOfLinkedLists(head2, head3);
             PrintLinkedListValues(sum);
+
+            Node intersection = new Node(99);
+
+            Node[] llVals = new Node[] { new Node(1), new Node(4), new Node(5), intersection, new Node(6) };
+            Node ll1 = new Node(6);
+            PopulateLinkedList(ll1, llVals);
+
+            llVals = new Node[] { new Node(1), new Node(4), new Node(5), intersection };
+            Node ll2 = new Node(3);
+
+            PopulateLinkedList(ll2, llVals);
+
+            PrintLinkedListValues(ll1);
+            PrintLinkedListValues(ll2);
+
+            PrintLinkedListValues(FindIntersectingNode(ll1, ll2));
+
+            Node ll = new Node(1);
+            Node looper = new Node(33);
+            llVals = new Node[] { new Node(7), new Node(4), new Node(5), looper, new Node(2), new Node(6), looper};
+            PrintLinkedListValues(DetectLoop(ll));
         }
 
         /*----------------------pg. 94 Question 2.1-------------------------------------------*/
@@ -85,12 +106,24 @@ namespace CommonInterviewQuestionsPractice
             }
         }
 
+        //populate with integers
         private void PopulateLinkedList(Node head, int[] values)
         {
             Node currentNode = head;
             for (int i = 0; i < values.Length; i++)
             {
                 currentNode.Next = new Node(values[i]);
+                currentNode = currentNode.Next;
+            }
+        }
+
+        //populate with Nodes
+        private void PopulateLinkedList(Node head, Node[] values)
+        {
+            Node currentNode = head;
+            for (int i = 0; i < values.Length; i++)
+            {
+                currentNode.Next = values[i];
                 currentNode = currentNode.Next;
             }
         }
@@ -306,6 +339,110 @@ namespace CommonInterviewQuestionsPractice
         private bool IsPalindrome(Node head)
         {
             return false;
+        }
+        /*------------------------------------------------------------------------------------*/
+
+        /*----------------------pg. 95 Question 2.7-------------------------------------------*/
+
+        /*this solution is incorrect as it doesnt account for some cases where linked lists that differ in length
+        private Node FindIntersectingNode(Node head1, Node head2)
+        {
+            Node pointer1 = head1;
+            Node pointer2 = head2;
+            Node intersection = null;
+
+            while (true)
+            {
+                if(pointer1 == pointer2)
+                {
+                    return pointer1;
+                }
+
+                if (pointer1 != null)
+                {
+                    pointer1 = pointer1.Next;
+                }
+                if (pointer1 == null)
+                {
+                    intersection = intersection == null ? pointer2.Next : intersection;
+                }
+
+                if (pointer2 != null)
+                {
+                    pointer2 = pointer2.Next;
+                }
+                
+                if(pointer2 == null)
+                {
+                    intersection = intersection == null ? pointer1 : intersection;
+                }
+
+                if (pointer1 == null && pointer2 == null)
+                {
+                    if(pointer1 == pointer2)
+                    {
+                        return intersection;
+                    }
+                    else
+                    {
+                        return new Node(-1);
+                    }
+                }
+            }
+        }/*
+        /*------------------------------------------------------------------------------------*/
+
+        //we can get the difference in lengths between both lists and move the pointer of the longest list to the index length1 - length2...
+        private Node FindIntersectingNode(Node head1, Node head2)
+        {
+            int length1 = GetLinkedListLength(head1);
+            int length2 = GetLinkedListLength(head2);
+
+            Node longest = length1 > length2 ? head1 : head2;
+            Node shortest = length1 > length2 ? head2 : head1;
+
+            int difference = Math.Abs(length1 - length2);
+
+            for(int i = 0; i < difference; i++)
+            {
+                longest = longest.Next;
+            }
+
+            while (true)
+            {
+                if (longest == shortest)
+                {
+                    return longest;
+                }
+
+                if(shortest != null)
+                {
+                    shortest = shortest.Next;
+                }
+
+               longest = longest.Next;
+            }
+        }
+
+        private int GetLinkedListLength(Node head)
+        {
+            int length = 0;
+
+            while (head != null)
+            {
+                head = head.Next;
+                length++;
+            }
+
+            return length;
+        }
+        /*------------------------------------------------------------------------------------*/
+
+        /*----------------------pg. 95 Question 2.8-------------------------------------------*/
+        private Node DetectLoop(Node head)
+        {
+
+            return new Node(-1); //no loop found
         }
         /*------------------------------------------------------------------------------------*/
     }
