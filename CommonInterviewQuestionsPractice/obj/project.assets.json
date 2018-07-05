@@ -664,27 +664,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nizar\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\Nizar Maan\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nizar\\Documents\\Visual Studio 2017\\Projects\\CrackingTheCodingInterview\\CommonInterviewQuestionsPractice\\CommonInterviewQuestionsPractice.csproj",
+      "projectUniqueName": "C:\\Users\\Nizar Maan\\Desktop\\Nizar\\visual-studio-projects\\Applications\\CrackingTheCodingInterview\\CommonInterviewQuestionsPractice\\CommonInterviewQuestionsPractice.csproj",
       "projectName": "CommonInterviewQuestionsPractice",
-      "projectPath": "C:\\Users\\Nizar\\Documents\\Visual Studio 2017\\Projects\\CrackingTheCodingInterview\\CommonInterviewQuestionsPractice\\CommonInterviewQuestionsPractice.csproj",
-      "packagesPath": "C:\\Users\\Nizar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nizar\\Documents\\Visual Studio 2017\\Projects\\CrackingTheCodingInterview\\CommonInterviewQuestionsPractice\\obj\\",
+      "projectPath": "C:\\Users\\Nizar Maan\\Desktop\\Nizar\\visual-studio-projects\\Applications\\CrackingTheCodingInterview\\CommonInterviewQuestionsPractice\\CommonInterviewQuestionsPractice.csproj",
+      "packagesPath": "C:\\Users\\Nizar Maan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nizar Maan\\Desktop\\Nizar\\visual-studio-projects\\Applications\\CrackingTheCodingInterview\\CommonInterviewQuestionsPractice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nizar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Nizar Maan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
